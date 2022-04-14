@@ -32,14 +32,14 @@ class TICtoc{
         // span1
         this.span1.addEventListener('click',function(e){
             this.delete(this.span1);
-        }.bind(this))
+        }.bind(this));
         //span2
         this.span2.addEventListener('click',function(e){
             this.delete(this.span2);
-        }.bind(this))
+        }.bind(this));
         this.span3.addEventListener('click',function(e){
             this.delete(this.alert);
-        })
+        }.bind(this));
 
     }
 
