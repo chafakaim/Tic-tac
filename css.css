@@ -44,6 +44,7 @@ h1{
 }
 .player1,.player2{
     position:absolute;
+    z-index: 99;
    
     padding:30px;
     font-weight: 700;
@@ -78,6 +79,7 @@ span{
     top: 20px;
     transform: translateX(400px);
     transition:transform 1s;
+    z-index: 99;
 
 }
 .alert.active{
@@ -87,7 +89,7 @@ span{
     padding:3px;
     cursor: pointer;
 }
-.gameover{
+.gameover,.succes{
     position:absolute;
     display: flex;
     flex-direction: column;
@@ -96,6 +98,32 @@ span{
 
     height: 100vh;
     background-color: black;
-    opacity: .4;
+    opacity: 0;
     width: 100%;
+    display: none;
+    transition: .5s all;
+}
+.gameover.fade{
+    display: flex;
+    transition: 0.5s all;
+}
+.gameover.fade.on{
+    opacity: .8;
+}
+.gameover h3,.succes h3{
+    color: white;
+    font-size: 1.8em;
+    letter-spacing: 4px;
+
+}
+.game{
+    padding:5px 20px;
+}
+
+.succes.fade{
+    display: flex;
+    transition: 0.5s all;
+}
+.succes.fade.on{
+    opacity: .8;
 }
